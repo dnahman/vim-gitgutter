@@ -174,8 +174,9 @@ endfunction
 
 " True for git v1.7.2+.
 function! gitgutter#utility#git_supports_command_line_config_override() abort
-  let [major, minor, patch; _] = split(gitgutter#utility#git_version(), '\.')
-  return major > 1 || (major == 1 && minor > 7) || (minor == 7 && patch > 1)
+"  let [major, minor, patch; _] = split(gitgutter#utility#git_version(), '\.')
+"  return major > 1 || (major == 1 && minor > 7) || (minor == 7 && patch > 1)
+  return 1
 endfunction
 
 function! gitgutter#utility#stringify(list) abort
